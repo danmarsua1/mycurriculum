@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_DB=curriculum
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_INITDB_ARGS="--data-checksums"
+      - LANG=C.UTF-8
+    ports:
+      - "5432:5432"
+
