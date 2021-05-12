@@ -1,9 +1,68 @@
 {% extends "base.html" %}
-
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    {{ page.body|richtext }}
+
+    <div class="container-fluid text-center pt-5 pb-5" style="background-color:#333333">
+        <h1 style="color:white">{{ self.header }}&nbsp;<small>{{ self.subheader }}</small></h1>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center text-left">
+
+            <div class="card pl-4" style="width: 60%;border:none">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                    {% image self.avatar fill-200x300 %}
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-text">
+                        <address>
+                            <div>
+                                <h3>Daniel Jesús Martínez Suárez&nbsp;<small>(29 años)</small></h3>
+                            </div>
+                            <div class="mt-5">
+                                <h4>Nacionalidad: Española</h4><br>
+                            <h4><i class="fa fa-phone fa-lg"></i>&nbsp;(+34) 635 639 660</h4><br>
+                            E-mail:&nbsp;<a href="mailto:#">danieljms.sec@gmail.com</a><br>
+                            Linked-in:&nbsp;https://www.linkedin.com/in/djms-sec/
+                            </div>
+                        </address>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+        </div>
+        <div class="row">
+            <h2>Sobre mi</h2>
+        </div>
+        <div class="row text-justify">
+            Técnico Superior en Desarrollo de Aplicaciones Informáticas, Grado en Ingeniería del Software (Trabajo Fin
+        de Grado) con gran experiencia en programación web, avezado en entornos Full Stack con Java-Oracle, Java-
+        MySQL y entornos Front-end con tecnologías como PHP, y más actuales como HTML5, CSS3, JavaScript,
+        JQuery, Angular y SASS, así como desarrollo de scripts en lenguaje Python y lenguaje R. Desarrollé, durante
+        2 años, un proyecto web de digitalización de más de 15.000 puntos-acuífero con geolocalización, de una
+        base de datos hidrogeológica en el ámbito de Sevilla, Cádiz y Huelva, así como traté con procesos
+        automatizados y labores de Big Data para acondicionamiento y presentación a nivel científico alternando
+        Python y Lenguaje R, todo ello trabajando para el IGME (Instituto Geológico y Minero de España). También
+        poseo un Máster presencial en Ciberseguridad de la Universidad de Nebrija impartido por la escuela de
+        negocios IMF Business School, además de 4 certificaciones por el CyberSOC de Deloitte (Madrid): Secure
+        Programmer, Reverse Engineer, Ethical Hacker y Forensic Investigator. Mi pasión es la programación,
+        además soy especialista desarrollando y resolviendo conflictos en proyectos que empleen Java. Me
+        considero una persona muy autodidacta y con buen trabajo en equipo.
+        </div>
+        <div class="row mt-5">
+
+        </div>
+    </div>
+
+
+
 {% endblock %}
